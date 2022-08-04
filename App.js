@@ -28,6 +28,15 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Navigation from './src/Navigation';
+import Welcome from './src/screens/Welcome/Welcome';
+import Riding from './src/screens/Riding/Riding';
+import Carpool from './src/screens/Carpool/Carpool';
+import Explore1 from './src/screens/Explore-1/Explore1';
+import Icons from './src/screens/Icons/Icons';
+import Destination from './src/screens/Destination/Destination';
+import Carpool2 from './src/screens/Carpool2/Carpool2';
+import Choose from './src/screens/Choose/Choose';
+import Ridingfeel from './src/screens/RidingFeel/Ridingfeel';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -49,7 +58,16 @@ const App = () => {
         {/*<VehicleList/>*/}
         {/*<Parking/>*/}
         {/*<AddParking/>*/}
-        <Navigation />
+        {/*<Navigation />*/}
+        {/*<Welcome/>*/}
+        {/*<Riding/>*/}
+        {/*<Carpool/>*/}
+        {/*<Explore1/>*/}
+        {/*<Icons/>*/}
+        {/*<Destination/>*/}
+        {/*<Carpool2/>*/}
+        {/*<Choose/>*/}
+        <Ridingfeel/>
       </ScrollView>
     </SafeAreaView>
   );
