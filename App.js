@@ -37,6 +37,8 @@ import Destination from './src/screens/Destination/Destination';
 import Carpool2 from './src/screens/Carpool2/Carpool2';
 import Choose from './src/screens/Choose/Choose';
 import Ridingfeel from './src/screens/RidingFeel/Ridingfeel';
+import SelectVehicle from './src/screens/SelectVehicle/SelectVehicle';
+import RideSelect from './src/screens/RideSelect/RideSelect';
 
 const App = () => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -67,7 +69,9 @@ const App = () => {
         {/*<Destination/>*/}
         {/*<Carpool2/>*/}
         {/*<Choose/>*/}
-        <Ridingfeel/>
+        {/*<Ridingfeel/>*/}
+        {/*<SelectVehicle/>*/}
+        <RideSelect/>
       </ScrollView>
     </SafeAreaView>
   );
