@@ -16,7 +16,7 @@ import {
   Text,
   useColorScheme,
   View,
-  
+
 } from 'react-native';
 
 import {
@@ -46,36 +46,38 @@ const App = () => {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        {/*<SignUpScreen/>*/}
-        {/*<DrivingLicence/>*/}
-        {/*<AddVehicle1 />*/}
-        {/*<AddVehicle2/>*/}
-        {/*<VehicleList/>*/}
-        {/*<Parking/>*/}
-        {/*<AddParking/>*/}
-        {/*<Navigation />*/}
-        {/*<Welcome/>*/}
-        {/*<Riding/>*/}
-        {/*<Carpool/>*/}
-        {/*<Explore1/>*/}
-        {/*<Icons/>*/}
-        {/*<Destination/>*/}
-        {/*<Carpool2/>*/}
-        {/*<Choose/>*/}
-        {/*<Ridingfeel/>*/}
-        {/*<SelectVehicle/>*/}
-        {/*<RideSelect/>*/}
-        <CarpoolList/>
-      </ScrollView>
-    </SafeAreaView>
-  );
+    <Navigation />
+  )
+  // return (
+  //   <SafeAreaView style={backgroundStyle}>
+  //     <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+  //     <ScrollView
+  //       contentInsetAdjustmentBehavior="automatic"
+  //       style={backgroundStyle}>
+  //       {/*<SignUpScreen/>*/}
+  //       {/*<DrivingLicence/>*/}
+  //       {/*<AddVehicle1 />*/}
+  //       {/*<AddVehicle2/>*/}
+  //       {/*<VehicleList/>*/}
+  //       {/*<Parking/>*/}
+  //       {/*<AddParking/>*/}
+  //       <Navigation />
+  //       {/*<Welcome/>*/}
+  //       {/*<Riding/>*/}
+  //       {/*<Carpool/>*/}
+  //       {/*<Explore1/>*/}
+  //       {/*<Icons/>*/}
+  //       {/*<Destination/>*/}
+  //       {/*<Carpool2/>*/}
+  //       {/*<Choose/>*/}
+  //       {/*<Ridingfeel/>*/}
+  //       {/*<SelectVehicle/>*/}
+  //       {/*<RideSelect/>*/}
+  //       {/*<CarpoolList/>*/}
+  //     </ScrollView>
+  //   </SafeAreaView>
+  // );
 };
 
 const styles = StyleSheet.create({

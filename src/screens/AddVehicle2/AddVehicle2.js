@@ -2,9 +2,14 @@ import React from 'react';
 import { View , Text  , TouchableOpacity ,Alert , Image , Button} from 'react-native';
 import { CheckBox , Icon , Input } from 'react-native-elements';
 import {useEffect , useState} from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 
 const AddVehicle2 = () => {
+    const navigation = useNavigation();
+    const onPressed = () => {
+        navigation.navigate('VehicleList')
+    };
     return(
         <View style={{
             backgroundColor: 'white'
@@ -24,7 +29,7 @@ const AddVehicle2 = () => {
                     marginTop: 15,
 
                 }}
-                onPress={() => Alert.alert('Precious Page ')}>
+                onPress={onPressed}>
                     
                     <Text> Back </Text>
                 </TouchableOpacity>
@@ -120,7 +125,7 @@ const AddVehicle2 = () => {
             <Button
                 title="Continue"
                 
-                onPress={() => Alert.alert('Simple Button pressed')}
+                onPress={onPressed}
                 color='#1e95d0'
                 
              />

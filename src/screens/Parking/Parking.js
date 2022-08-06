@@ -1,14 +1,21 @@
 import React from 'react';
-import { View , Text  , TouchableOpacity , Alert, Image , Button} from 'react-native';
+import { View , Text  , TouchableOpacity , Alert, Image , Button , ScrollView} from 'react-native';
 import { CheckBox , Icon , Switch } from 'react-native-elements';
 import {useEffect , useState} from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 const Parking = () => {
     const [checked, setChecked] = useState(false);
     const [checked1, setChecked1] = useState(false);
     const [checked2, setChecked2] = useState(false);
-
+    const navigation = useNavigation();
+    const onPressed = () => {
+        navigation.navigate('AddParking')
+        
+        
+    };
     return(
+        <ScrollView>
         <View style={{
              backgroundColor: 'white'
         }}>
@@ -27,7 +34,7 @@ const Parking = () => {
                     marginTop: 15,
 
                 }}
-                onPress={() => Alert.alert('Next page')}>
+                onPress={onPressed}>
                     
                     <Text>Skip ></Text>
                 </TouchableOpacity>
@@ -216,7 +223,7 @@ const Parking = () => {
             <Button
                 title="Continue"
                 
-                onPress={() => Alert.alert('Simple Button pressed')}
+                onPress={onPressed}
                 color='#1e95d0'
                 
              />
@@ -224,6 +231,7 @@ const Parking = () => {
             
             
         </View>
+        </ScrollView>
     )
 }
 

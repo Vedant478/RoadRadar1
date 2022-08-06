@@ -2,12 +2,16 @@ import React from 'react';
 import { View , Text , Image , Button , Alert} from 'react-native';
 import { CheckBox , Icon , Input } from 'react-native-elements';
 import {useEffect , useState} from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 
 const AddParking = () => {
     const [check1, setCheck1] = useState(false);
     const [check2, setCheck2] = useState(false);
-
+    const navigation = useNavigation();
+    const onPressed = () => {
+        navigation.navigate('Parking')
+    };
     return(
         <View style={{
             backgroundColor: 'white'
@@ -73,10 +77,12 @@ const AddParking = () => {
                    <Icon 
                        containerStyle={{
                            marginLeft: 10,
-                           marginTop: 5
+                           marginTop: 5,
+                           
                        }}
                        name='plus'
                        type='font-awesome'
+                       onPress={onPressed}
                        
                        />
                </View> 
@@ -88,9 +94,9 @@ const AddParking = () => {
                    backgroundColor: 'white',
                }}>
                <Button
-                   title="Continue"
+                   title="Finish"
                    
-                   onPress={() => Alert.alert('Simple Button pressed')}
+                   onPress={() => Alert.alert('Task Completed')}
                    color='#1e95d0'
                    
                 />

@@ -2,9 +2,16 @@
 import React from "react";
 import { View , Text, Image  ,Button , Alert} from "react-native";
 import CustomInput from "../../components/CustomInput";
+import { useNavigation } from "@react-navigation/native";
 
 
 const SignUpScreen = () => {
+    const navigation = useNavigation();
+    const onSignInPressed = () => {
+        console.warn('Sign in')
+        navigation.navigate('Driving')
+    };
+
     return(
         <View>
             <View>
@@ -66,10 +73,11 @@ const SignUpScreen = () => {
                 backgroundColor: 'white'
                 
             }}>
+                
             <Button
                 
                 title="Continue"
-                onPress={() => Alert.alert('Simple Button pressed')}
+                onPress={onSignInPressed}
                 color='#1e95d0'
                 
              />

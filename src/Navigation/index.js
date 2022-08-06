@@ -18,8 +18,14 @@ const Navigation = () => {
     return(
         
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='Signup'>
+            <Stack.Navigator initialRouteName='Signup' screenOptions={{headerShown: false}} >
                 <Stack.Screen name='Signup' component={SignUpScreen}/>
+                <Stack.Screen name='Driving' component={DrivingLicence}/>
+                <Stack.Screen name='AddVehicle1' component={AddVehicle1}/>
+                <Stack.Screen name='AddVehicle2' component={AddVehicle2}/>
+                <Stack.Screen name='VehicleList' component={VehicleList}/>
+                <Stack.Screen name='Parking' component={Parking}/>
+                <Stack.Screen name='AddParking' component={AddParking}/>
                 
             </Stack.Navigator>
         </NavigationContainer>

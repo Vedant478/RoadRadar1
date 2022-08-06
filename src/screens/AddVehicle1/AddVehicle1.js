@@ -2,11 +2,16 @@ import React from 'react';
 import { View , Text , TouchableOpacity ,Alert , Image , Button} from 'react-native';
 import { CheckBox , Icon } from 'react-native-elements';
 import {useEffect , useState} from 'react';
-
+import { useNavigation } from '@react-navigation/native';
 const AddVehicle1 = () => {
     const [Private,setPrivate] = useState(false);
     const [commercial,setcommercial] = useState(false);
-
+    const navigation = useNavigation();
+    const onPressed = () => {
+        navigation.navigate('AddVehicle2')
+        
+        
+    };
 
     return(
         <View style={{
@@ -27,7 +32,7 @@ const AddVehicle1 = () => {
                     marginTop: 15,
 
                 }}
-                onPress={() => Alert.alert('Next page')}>
+                onPress={onPressed}>
                     
                     <Text>Skip ></Text>
                 </TouchableOpacity>
@@ -197,7 +202,7 @@ const AddVehicle1 = () => {
             <Button
                 title="Continue"
                 
-                onPress={() => Alert.alert('Simple Button pressed')}
+                onPress={onPressed}
                 color='#1e95d0'
                 
              />

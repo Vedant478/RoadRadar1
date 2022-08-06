@@ -3,6 +3,9 @@ import React from 'react';
 import { View , Text , Image, Button, Alert, TouchableOpacity} from 'react-native';
 import {useEffect , useState} from 'react';
 import { CheckBox , Icon } from 'react-native-elements';
+import { useNavigation } from '@react-navigation/native';
+
+
 
 
     
@@ -15,7 +18,12 @@ const Drivinglicence = () => {
     const [check3, setCheck3] = useState(false);
     const [check4, setCheck4] = useState(false);
     const [check5, setCheck5] = useState(false);
-
+    const navigation = useNavigation();
+    const onPressed = () => {
+        navigation.navigate('AddVehicle1')
+        
+        
+    };
     return(
         <View style={{
             backgroundColor: 'white',
@@ -35,9 +43,9 @@ const Drivinglicence = () => {
                     marginTop: 15,
 
                 }}
-                onPress={() => Alert.alert('Next page')}>
+                onPress={onPressed}>
                     
-                    <Text>Skip ></Text>
+                    <Text>Skip </Text>
                 </TouchableOpacity>
             </View>
             <View style={{
@@ -279,7 +287,7 @@ const Drivinglicence = () => {
             <Button
                 title="Continue"
                 
-                onPress={() => Alert.alert('Simple Button pressed')}
+                onPress={onPressed}
                 color='#1e95d0'
                 
              />
