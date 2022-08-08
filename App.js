@@ -40,14 +40,15 @@ import Ridingfeel from './src/screens/RidingFeel/Ridingfeel';
 import SelectVehicle from './src/screens/SelectVehicle/SelectVehicle';
 import RideSelect from './src/screens/RideSelect/RideSelect';
 import CarpoolList from './src/screens/CarpoolList/CarpoolList';
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+import Calender2 from './src/screens/Calender/Calender2';
+const App = () => {
+  
+
+  
   return (
-    <Navigation />
+    // <Navigation />
+    <Calender2/>
   )
   // return (
   //   <SafeAreaView style={backgroundStyle}>
