@@ -42,13 +42,17 @@ import RideSelect from './src/screens/RideSelect/RideSelect';
 import CarpoolList from './src/screens/CarpoolList/CarpoolList';
 
 import Calender2 from './src/screens/Calender/Calender2';
+
+import Time2 from './src/screens/Time/Time2.js';
 const App = () => {
   
 
   
   return (
     // <Navigation />
-    <Calender2/>
+    // <Calender2/>
+    <Time2/>
+    
   )
   // return (
   //   <SafeAreaView style={backgroundStyle}>
