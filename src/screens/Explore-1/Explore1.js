@@ -1,8 +1,31 @@
 import React from 'react';
-import { View , Text , Alert , Image , Pressable , TouchableOpacity} from 'react-native';
+import { View , Text , Alert , Image , Pressable , TouchableOpacity , } from 'react-native';
 import { CheckBox , Icon , Input , Switch , Button} from 'react-native-elements';
-
+import {useEffect , useState} from 'react'; 
 const Explore1 = () => {
+    const [isActive, setIsActive] = useState(false);
+    const [isActive2, setIsActive2] = useState(false);
+    const [isActive3, setIsActive3] = useState(false);
+    const [isActive4, setIsActive4] = useState(false);
+
+const handleClick = () => {
+   
+    setIsActive(current => !current);
+};
+const handleClick2 = () => {
+   
+    setIsActive2(current => !current);
+};
+const handleClick3 = () => {
+   
+    setIsActive3(current => !current);
+};
+const handleClick4 = () => {
+   
+    setIsActive4(current => !current);
+};
+
+    
     return(
         <View style={{
             backgroundColor: 'white'
@@ -156,13 +179,12 @@ const Explore1 = () => {
                         marginTop: 20, 
                         height : 90,
                         width: 400,
-                        shadowColor: '#171717',
-                        shadowOffset: {width: -2, height: 4},
-                        shadowOpacity: 0.2,
-                        shadowRadius: 3,
+                        elevation: 8,
                         borderWidth : 1,
                         borderTopColor: 'grey',
-                        justifyContent: 'space-evenly'
+                        justifyContent: 'space-evenly',
+                       
+                       
 
                     }}>
                     <Icon
@@ -170,32 +192,32 @@ const Explore1 = () => {
                     size= {40}
                     name='home'
                     type='antdesign'
-                    color='blue'
-                    onPress={() => Alert.alert('back')} 
+                    color={isActive ? 'blue' : '#778899'}
+                    onPress={handleClick} 
                     />
                     <Icon
                     containerStyle={{height :60, marginTop: 10 }}
                     size= {40}
                     name='calendar-plus-o'
                     type='font-awesome'
-                    color='black'
-                    onPress={() => Alert.alert('back')} 
+                    color={isActive2 ? 'blue' : '#778899'}
+                    onPress={handleClick2}
                     />
                     <Icon
                     containerStyle={{height :60, marginTop: 10 }}
                     size= {40}
                     name='diff-added'
                     type='octicon'
-                    color='black'
-                    onPress={() => Alert.alert('back')} 
+                    color={isActive3 ? 'blue' : '#778899'}
+                    onPress={handleClick3}
                     />
                     <Icon
                     containerStyle={{height :60, marginTop: 10 , }}
                     size= {40}
                     name='user'
                     type='antdesign'
-                    color='black'
-                    onPress={() => Alert.alert('back')} 
+                    color={isActive4 ? 'blue' : '#778899'}
+                    onPress={handleClick4}
                     />
                     
 

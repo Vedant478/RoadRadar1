@@ -51,7 +51,8 @@ const App = () => {
   return (
     // <Navigation />
     // <Calender2/>
-    <Time2/>
+    // <Time2/>
+  <Explore1/>
     
   )
   // return (
