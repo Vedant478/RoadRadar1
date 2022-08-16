@@ -28,12 +28,12 @@ const Carpool = () => {
             <View style={{
                 flexDirection: 'row'
             }}>
-                <Image source={require("../../../assets/images/Rectangle35.png")} 
+                <Image source={require("../../../assets/images/carpool.png")} 
                 style={{
-                width: 60,
-                height: 60,
-                marginTop: 30,
-                marginLeft: 40,
+                width: 80,
+                height: 80,
+                marginTop: 15,
+                marginLeft: 35,
                 }}/>
                 <View style={{
                     marginTop: 35,

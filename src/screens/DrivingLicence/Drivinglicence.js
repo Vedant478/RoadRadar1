@@ -178,12 +178,12 @@ const Drivinglicence = () => {
                 marginLeft: 10,
                 marginTop: 10,
             }}>
-                <Image source={require("../../../assets/images/SUV1.png")}
+                <Image source={require("../../../assets/images/scooter.png")}
                 style={{
-                    marginTop: 10,
+                    marginTop: 8,
                     marginLeft: 20,
                     width: 50,
-                    height: 50,
+                    height: 45,
                     backgroundColor: 'white'
                 }}/>
                 <View style={{
@@ -191,12 +191,12 @@ const Drivinglicence = () => {
                     marginTop: 10,
                     
                 }}>
-                    <Text style={{fontSize: 17,fontWeight: 'bold' , color: 'black'}}>SUV</Text>
-                    <Text>More people can travel </Text>
+                    <Text style={{fontSize: 17,fontWeight: 'bold' , color: 'black'}}>FVG</Text>
+                    <Text>Vehicle without gears</Text>
                 </View>
                 <CheckBox
                 containerStyle={{
-                    marginLeft:81,
+                    marginLeft:93,
                 }}
                     center
                     
@@ -210,16 +210,16 @@ const Drivinglicence = () => {
             <View style={{
                 flexDirection: 'row'
             }}>
-                <Image source={require("../../../assets/images/Rectangle30.png")}
+                <Image source={require("../../../assets/images/motorbike1.png")}
                 style={{
                     marginTop: 10,
                     marginLeft: 20,
-                    width: 70,
+                    width: 60,
                     height: 60,
                     backgroundColor: 'white'
                 }}/>
                 <View style={{
-                    marginLeft: 10,
+                    marginLeft: 17,
                     marginTop: 20,
                     
                 }}>
@@ -228,7 +228,7 @@ const Drivinglicence = () => {
                 </View>
                 <CheckBox
                 containerStyle={{
-                    marginLeft:54,
+                    marginLeft:55,
                     marginTop:20
                 }}
                     center

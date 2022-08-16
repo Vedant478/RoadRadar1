@@ -15,10 +15,11 @@ const SignUpScreen = () => {
     return(
         <View>
             <View>
-                <Image source={require("../../../assets/images/Logo.jpeg")}
+                <Image source={require("../../../assets/images/loginImg.jpeg")}
                 style={{
-                    width: '100%',
+                    width: 390,
                     height: 300,
+                    
                 }}/>
             </View>
             <View style={{
@@ -38,38 +39,65 @@ const SignUpScreen = () => {
             
             }}>
                 
+            <View style={{
+                borderWidth: 1,
+                borderColor: '#1e95d0',
+                borderRadius: 15,
+                height: 80, 
+                width : 100,
                 
+            }}>
                <Image source={require("../../../assets/images/google-image-icon-21.jpg")}
                style={{
-                height: 70,
-                width: 70,
-                padding: 10,
-                marginLeft: 20,
-                marginTop: 20,
-            }}/>
-             <Image source={require("../../../assets/images/facebook.jpg")}
-               style={{
                 height: 50,
-                width: 50,
-                padding: 10,
-                marginLeft: 20,
-                marginTop: 30,
-            }}/>
-             <Image source={require("../../../assets/images/apple-21.jpg")}
-               style={{
-                height: 80,
                 width: 80,
-                padding: 10,
-                marginLeft: 20,
-                marginTop: 15,
+                resizeMode: 'contain',
+                marginLeft: 10,
+                marginTop: 15
             }}/>
+            </View>
+            <View style={{
+                borderWidth: 1,
+                borderColor: '#1e95d0',
+                borderRadius: 15,
+                height: 80, 
+                width : 100,
+                
+            }}>
+                <Image source={require("../../../assets/images/fb.png")}
+               style={{
+                height: 40,
+                width: 80,
+                resizeMode: 'contain',
+                marginLeft: 10,
+                marginTop: 20
+               }}/>
+            </View>
+            <View style={{
+                borderWidth: 1,
+                borderColor: '#1e95d0',
+                borderRadius: 15,
+                height: 80, 
+                width : 100,
+                
+            }}>
+             <Image source={require("../../../assets/images/ios.png")}
+               style={{
+                
+                height: 40,
+                width: 80,
+                resizeMode: 'contain',
+                marginLeft: 10,
+                marginTop: 20
+            }}/>
+            </View>
             </View>
             <CustomInput/>
             <View style= {{
                 height: 200,
                 marginLeft: 10,
                 marginRight : 10,
-                marginTop : 10,
+                marginTop : 5,
                 backgroundColor: 'white'
                 
             }}>

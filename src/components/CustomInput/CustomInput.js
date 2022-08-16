@@ -25,6 +25,8 @@ return(
             containerStyle={{marginTop: 10 , color: 'grey', height: 40}}
             
             />
+        </View>
+        <View>
         <Input
             placeholder='Age'
             leftIcon={{ type: 'font-awesome', name: 'smile-o' , color: 'grey'}}
@@ -35,7 +37,8 @@ return(
         <View style={{
             flexDirection: 'row',
             marginRight: 10,
-            backgroundColor: 'white'
+            backgroundColor: 'white',
+            marginTop: 15
             
              
         }}>

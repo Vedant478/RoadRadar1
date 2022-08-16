@@ -49,10 +49,11 @@ const App = () => {
 
   
   return (
-    // <Navigation />
+     <Navigation />
     // <Calender2/>
     // <Time2/>
-  <Explore1/>
+  // <Explore1/>
+    // <Carpool/>
     
   )
   // return (
