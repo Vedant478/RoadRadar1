@@ -14,6 +14,18 @@ const Parking = () => {
         
         
     };
+    const [isActive, setIsActive] = useState(false);
+    const [isActive2, setIsActive2] = useState(false);
+    
+const handleClick = () => {
+   
+    setIsActive(current => !current);
+};
+const handleClick2 = () => {
+   
+    setIsActive2(current => !current);
+};
+
     return(
         <ScrollView>
         <View style={{
@@ -36,7 +48,13 @@ const Parking = () => {
                 }}
                 onPress={onPressed}>
                     
-                    <Text>Skip ></Text>
+                    <Text>
+                    <Icon
+                    name='angle-right'
+                    type='font-awesome'
+                    containerStyle={{marginTop: 10, marginLeft: 5}}
+                     />
+                    </Text>
                 </TouchableOpacity>
             </View>
             <View style={{
@@ -71,9 +89,10 @@ const Parking = () => {
                     marginRight: 5,
                     flexDirection: 'row'
                 }}>
+                    <TouchableOpacity onPress={handleClick}>
                     <View style={{
                     borderWidth:3,
-                    borderColor: '#1e95d0',
+                    borderColor: isActive ? '#1e95d0' : 'grey',
                     borderRadius: 10,
                     marginLeft: 5,
                     }}>
@@ -86,11 +105,13 @@ const Parking = () => {
                         marginRight: 20,
                         
                     }}/>
-                    <Text style={{ fontSize : 18,  marginTop:10,marginLeft: 10, marginBottom: 10, fontWeight: '700' ,color: '#1e95d0'}}>Four Wheeler</Text>
+                    <Text style={{ fontSize : 18,  marginTop:10,marginLeft: 10, marginBottom: 10, fontWeight: '700' ,color: isActive ? '#1e95d0' : 'grey'}}>Four Wheeler</Text>
                     </View>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={handleClick2}>
                     <View style={{
-                    borderWidth:1,
-                    borderColor: 'grey',
+                    borderWidth:3,
+                    borderColor:isActive2 ? '#1e95d0' : 'grey' ,
                     marginLeft: 50,
                     borderRadius: 10,
                     
@@ -105,9 +126,9 @@ const Parking = () => {
                          
                         marginRight: 20
                     }}/>
-                    <Text style={{ fontSize :18 , marginTop:20, marginLeft: 10, marginRight: 10, marginBottom:10, fontWeight: '600'}}>Two Wheeler</Text>
+                    <Text style={{ fontSize :18 , marginTop:20, marginLeft: 10, marginRight: 10, marginBottom:10, fontWeight: '700' ,color:isActive2 ? '#1e95d0' : 'grey'}}>Two Wheeler</Text>
                     </View>    
-                    
+                    </TouchableOpacity>
                 </View>
             </View>
             <View style={{
@@ -125,19 +146,18 @@ const Parking = () => {
                     marginTop: 20,
                     marginRight: 20,
                     
-                }}><Icon
-                containerStyle={{
-                   marginTop: 35,
-
-                }}
-                name='file-image-o'
-                type='font-awesome'
-                color= '#d3d3d3'
-                onPress={() => console.log('hello')} />
-                        <TouchableOpacity>
+                }}><TouchableOpacity>
+                    <Image source={require("../../../assets/images/upload.png")}
+                    style={{
+                        marginLeft: 125,
+                        marginTop: 10,
+                        resizeMode: 'contain'
+                    }}/>
+                        
                             <Text style={{textAlign: 'center', marginTop: 20 , color: '#d3d3d3'}}>Tap to Choose</Text>
-                        </TouchableOpacity>
-
+                        
+                    </TouchableOpacity>
+                    
                 </View>
                 <View style={{
                 flexDirection: 'row',
