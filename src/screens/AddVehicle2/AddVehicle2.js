@@ -10,6 +10,17 @@ const AddVehicle2 = () => {
     const onPressed = () => {
         navigation.navigate('VehicleList')
     };
+    // const [isVisible, setIsVisible] = useState(false);
+    // const list = [
+    // { title: 'List Item 1' },
+    // { title: 'List Item 2' },
+    // {
+    // title: 'Cancel',
+    // containerStyle: { backgroundColor: 'red' },
+    // titleStyle: { color: 'white' },
+    // onPress: () => setIsVisible(false),
+    // },
+    // ];
     return(
         <View style={{
             backgroundColor: 'white'
@@ -70,18 +81,29 @@ const AddVehicle2 = () => {
                     height: 200,
                     marginTop: 20
                     
-                }}><Icon
-                containerStyle={{
-                   marginTop: 80,
-
-                }}
-                name='file-image-o'
-                type='font-awesome'
-                color= 'grey'
-                onPress={() => console.log('hello')} />
-                        <TouchableOpacity>
+                }}>
+                        <TouchableOpacity >
+                        <Image source={require("../../../assets/images/upload.png")}
+                        style={{
+                        marginLeft: 125,
+                        marginTop: 45,
+                        resizeMode: 'contain'
+                        }}/>
                             <Text style={{textAlign: 'center', marginTop: 20}}>Tap to Choose</Text>
                         </TouchableOpacity>
+                        {/* <BottomSheet modalProps={{}} isVisible={isVisible}>
+                        {list.map((l, i) => (
+                        <ListItem
+                        key={i}
+                        containerStyle={l.containerStyle}
+                        onPress={l.onPress}
+                        >
+                        <ListItem.Content>
+                        <ListItem.Title style={l.titleStyle}>{l.title}</ListItem.Title>
+                        </ListItem.Content>
+                        </ListItem>
+                ))}
+                        </BottomSheet> */}
 
                 </View>
             </View>
@@ -92,11 +114,16 @@ const AddVehicle2 = () => {
             }}>
                 <View style={{
                     marginTop: 30,
+                    
                 }}>
-                    <Image source={require('../../../assets/images/Car.jpeg')}></Image>
+                    <Image source={require('../../../assets/images/Car.jpeg')}
+                    style={{
+                        height: 50,
+                        width: 70
+                    }}></Image>
                 </View>
                 <View style={{
-                    marginTop: 40,
+                    marginTop: 30,
                     marginLeft: 30,
                 }}>
                     <Text style={{ fontSize: 15, fontWeight: '400' , color: 'black'}}>car-image.jpg</Text>

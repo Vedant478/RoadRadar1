@@ -18,7 +18,7 @@ const Navigation = () => {
     return(
         
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='Signup' screenOptions={{headerShown: false}} >
+            <Stack.Navigator initialRouteName='AddVehicle2' screenOptions={{headerShown: false}} >
                 <Stack.Screen name='Signup' component={SignUpScreen}/>
                 <Stack.Screen name='Driving' component={DrivingLicence}/>
                 <Stack.Screen name='AddVehicle1' component={AddVehicle1}/>

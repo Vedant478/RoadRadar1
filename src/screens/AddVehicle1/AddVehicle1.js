@@ -68,7 +68,7 @@ const handleClick5 = () => {
                 </TouchableOpacity>
             </View>
             <View style={{
-                padding: 15,
+               
                 marginLeft: 5,
                 
             }}>

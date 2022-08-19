@@ -41,20 +41,24 @@ import SelectVehicle from './src/screens/SelectVehicle/SelectVehicle';
 import RideSelect from './src/screens/RideSelect/RideSelect';
 import CarpoolList from './src/screens/CarpoolList/CarpoolList';
 
-import Calender2 from './src/screens/Calender/Calender2';
 
+import Calender2 from './src/screens/Calender/Calender2';
+import Map2 from './src/screens/Map2/Map';
 import Time2 from './src/screens/Time/Time2.js';
+import BottomSheetComponent from './src/components/Bottomshet/Bottomsheet';
 const App = () => {
   
 
   
   return (
-     <Navigation />
+   
+    //  <Navigation />
     // <Calender2/>
     // <Time2/>
-  // <Explore1/>
+      // <Explore1/>
+        // <Map2/>
     // <Carpool/>
-    
+   <BottomSheetComponent/>
   )
   // return (
   //   <SafeAreaView style={backgroundStyle}>
